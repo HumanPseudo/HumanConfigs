@@ -1,0 +1,22 @@
+#For GUI
+network:
+  ethernets:
+    enp0s3:
+      addresses: [0.0.0.0/0]
+      gateway4: 0.0.0.0/0
+      nameservers:
+        addresses: [1.1.1.1, 8.8.8.8]
+  version: 2
+
+#For Servers
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    ens3:
+      dhcp4: no
+      addresses:
+        - 0.0.0.0/0
+      gateway4: 0.0.0.0
+      nameservers:
+          addresses: [8.8.8.8, 1.1.1.1]
